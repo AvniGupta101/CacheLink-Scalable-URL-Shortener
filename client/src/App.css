@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #333;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #764ba2;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #764ba2;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+button:hover:not(:disabled) {
+  background: #667eea;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e53e3e;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.result {
+  margin-top: 24px;
+  padding: 16px;
+  background: #f7f5fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.result a {
+  color: #764ba2;
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.copy-btn {
+  background: #48bb78;
+  padding: 8px 14px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  background: #38a169;
+}
