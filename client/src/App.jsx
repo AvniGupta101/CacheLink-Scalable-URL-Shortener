@@ -19,7 +19,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${API_URL}/api/shorten`, { longUrl });
+      const res = await axios.post(`${API_URL}`, { longUrl });
       setShortUrl(res.data.shortUrl);
     } catch (err) {
       setError(err.response?.data?.error || 'Something went wrong');
