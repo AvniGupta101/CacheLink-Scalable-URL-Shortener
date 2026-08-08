@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://cache-link-scalable-url-shortener-quty-khcuxzx78.vercel.app/'
+const API_URL = import.meta.env.VITE_API_URL 
 ;
 function App() {
   const [longUrl, setLongUrl] = useState('');
@@ -19,7 +19,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${API_URL}`, { longUrl });
+      const res = await axios.post(`${API_URL}/api/shorten`, { longUrl });
       setShortUrl(res.data.shortUrl);
     } catch (err) {
       setError(err.response?.data?.error || 'Something went wrong');
